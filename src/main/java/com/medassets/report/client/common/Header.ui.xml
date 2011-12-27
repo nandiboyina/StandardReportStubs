@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+		
+		#header {
+			background-color: #ffffff;
+			background-image: url("header.png");
+			background-repeat: repeat-x;
+			height: 25px;
+			width: 100%;
+		}
+		
+		.navCheckLink {
+			color: #ffffff;
+			background-image: URL("linkImg.gif");
+			background-repeat: no-repeat;
+			background-position: right 3px;
+			padding: 0px 10px 0px 5px;
+		}
+		
+		.group::after {
+			content: ".";
+			display: block;
+			width: 100%;
+		}
+	</ui:style>
+
+	<g:FlowPanel width="100%">
+		<g:HTMLPanel height="25px">
+			<div id="header" class="group">
+				<div class="group"
+					style="color: #ffffff;
+                    float:left;
+                    padding-left:7px;
+                    padding-top:2px;
+                    padding-bottom:0px;
+                    white-space:nowrap;
+                    text-align:left;">
+
+					<a href="../mainmenu.do"
+						style="color: #ffffff;background-image: URL(linkImg.gif);background-repeat: no-repeat;background-position: right 3px;padding: 0px 10px 0px 0px;">Alliance Home</a>
+					<a href="../mainmenu.do"
+						style="color: #ffffff;padding: 0px 10px 0px 0px;">Reporting</a>
+				</div>
+				<div class="group"
+					style="color: #ffffff;
+                    float:right;
+                    width:280px;
+                    height:100%;
+                    padding-right:7px;
+                    padding-top:2px;
+                    padding-bottom:0px;
+                    white-space:nowrap;
+                    text-align:right;">
+					<a href="../logout.do" style="color: #ffffff;">Log out</a>
+					|
+					<a href="#"
+						onClick="FMCOpenHelp('../Subsystems/stdreports/Content/srlwh.htm', null);"
+						style="color: #ffffff;">Help</a>
+				</div>
+			</div>
+		</g:HTMLPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder> 

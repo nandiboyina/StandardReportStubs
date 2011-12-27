@@ -1,0 +1,51 @@
+<ui:UiBinder
+        xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:flex="urn:import:com.medassets.report.client.flex"
+        xmlns:m="urn:import:com.medassets.report.client.other"
+        >
+
+    <ui:style>
+        .test {
+            border: solid 1px;
+        }
+
+    </ui:style>
+
+    <g:LayoutPanel>
+        <g:layer top="1em" bottom="40px">
+
+            <g:LayoutPanel>
+
+                <g:layer right="50%" left="0">
+                    <m:VerticalFlowPanel>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="Assigned Cost Destination"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="Charge Master"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="Department Master"/>
+                        <m:EditBox labelWidth="250px" height="3em" labelText="Organization Name"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="UDR: Charge Item FIN CLASS"/>
+                    </m:VerticalFlowPanel>
+                </g:layer>
+
+                <g:layer right="0" left="50%">
+                    <m:VerticalFlowPanel>
+                        <m:LabelListBox styleName="{style.test}" labelWidth="250px" height="3em" labelText="Benefit Plan Master"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="Consolidate Code Description"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="Financial Record Type"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="UDR: Encounter Minor Patient Type"/>
+                        <m:LabelListBox labelWidth="250px" height="3em" labelText="URD: Encounter FIN CLASS"/>
+                    </m:VerticalFlowPanel>
+                </g:layer>
+
+            </g:LayoutPanel>
+
+
+        </g:layer>
+
+        <g:layer bottom="0" height="40px">
+            <g:Label>OK</g:Label>
+        </g:layer>
+
+    </g:LayoutPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,14 @@
+<ui:UiBinder
+        xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:flex="urn:import:com.medassets.report.client.flex"
+        xmlns:m="urn:import:com.medassets.report.client"
+        xmlns:c="urn:import:com.medassets.report.client.component">
+
+	<ui:style src="../resources/GlobalStyles.css" />
+
+    <g:FormPanel>
+        <g:VerticalPanel ui:field="formPanel" styleName="{style.dialogForm}"/>
+    </g:FormPanel>
+
+</ui:UiBinder>

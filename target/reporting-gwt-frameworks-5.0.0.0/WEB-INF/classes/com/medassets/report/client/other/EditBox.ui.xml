@@ -1,0 +1,42 @@
+<ui:UiBinder
+        xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:m="urn:import:com.medassets.report.client.other"
+        >
+
+    <ui:style>
+        .inputLabel {
+            text-align: right;
+            width: 100px;
+            position: absolute;
+            left: 0px;
+            float: left;
+            display: inline;
+        }
+
+        .input {
+            left: 100px;
+            width: 100%;
+            position: absolute;
+            display: inline;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+
+    </ui:style>
+
+
+    <g:LayoutPanel height="100%">
+
+        <g:layer>
+            <m:HorizontalFlowPanel>
+                <g:Label styleName="{style.inputLabel}" ui:field="label"/>
+                <g:TextBox styleName="{style.input}" ui:field="edit"/>
+            </m:HorizontalFlowPanel>
+        </g:layer>
+
+    </g:LayoutPanel>
+
+
+</ui:UiBinder>

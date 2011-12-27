@@ -1,0 +1,81 @@
+<ui:UiBinder
+        xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:m="urn:import:com.medassets.report.client.other"
+        >
+
+
+    <ui:style>
+        .panel {
+            padding: 10px;
+        }
+
+        .radio {
+            padding: 5px;
+        }
+
+        .aboutText {
+            text-align: left;
+        }
+
+        .buttons {
+            text-align: right;
+        }
+    </ui:style>
+
+    <g:HTMLPanel width='28em' styleName='{style.panel}'>
+
+        <g:CaptionPanel captionText="Ranking">
+            <m:VerticalFlowPanel>
+                <g:Label>Rank by:</g:Label>
+                <g:ListBox/>
+                <m:HorizontalFlowPanel>
+                    <g:Label>Order:</g:Label>
+                    <g:RadioButton styleName="{style.radio}" name="ascending">ascending</g:RadioButton>
+                    <g:RadioButton name="descending">descending</g:RadioButton>
+                </m:HorizontalFlowPanel>
+            </m:VerticalFlowPanel>
+        </g:CaptionPanel>
+
+        <g:CaptionPanel captionText="Limits">
+            <m:VerticalFlowPanel>
+
+                <g:LayoutPanel height="200px">
+
+                    <g:layer left="0" right="50%">
+
+                        <m:VerticalFlowPanel>
+                            <g:Label>Limit to:</g:Label>
+                            <g:ListBox/>
+                        </m:VerticalFlowPanel>
+                    </g:layer>
+
+                    <g:layer left="50%" right="0">
+                        <m:VerticalFlowPanel>
+                            <m:HorizontalFlowPanel>
+                                <g:Label>Value</g:Label>
+                                <g:CheckBox>percent</g:CheckBox>
+                            </m:HorizontalFlowPanel>
+                            <g:TextBox/>
+                        </m:VerticalFlowPanel>
+                    </g:layer>
+                </g:LayoutPanel>
+
+                <!--<g:ListBox/>-->
+            </m:VerticalFlowPanel>
+
+        </g:CaptionPanel>
+
+        <g:CaptionPanel captionText="Show">
+            <m:HorizontalFlowPanel>
+                <g:RadioButton styleName="{style.radio}" name="show">Code and Name</g:RadioButton>
+                <g:RadioButton styleName="{style.radio}" name="show">Code only</g:RadioButton>
+                <g:RadioButton styleName="{style.radio}" name="show">Name only</g:RadioButton>
+            </m:HorizontalFlowPanel>
+        </g:CaptionPanel>
+
+        <div class='{style.buttons}'>
+            <g:Button text='Close' ui:field="closeButton"/>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

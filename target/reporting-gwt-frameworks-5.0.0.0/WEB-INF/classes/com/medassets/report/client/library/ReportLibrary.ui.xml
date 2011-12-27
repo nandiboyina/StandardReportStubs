@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+             xmlns:app="urn:import:com.medassets.report.client.library"
+             xmlns:common="urn:import:com.medassets.report.client.common">
+
+    <ui:style src="../resources/GlobalStyles.css"/>
+    <g:SplitLayoutPanel styleName="{style.pageContent}">
+        <g:west size='250'>
+            <app:MainNavTree ui:field="tree"/>
+        </g:west>
+        <g:center>
+            <app:ReportTable ui:field="table" styleName="{style.mainPanel}"/>
+        </g:center>
+    </g:SplitLayoutPanel>
+
+</ui:UiBinder>

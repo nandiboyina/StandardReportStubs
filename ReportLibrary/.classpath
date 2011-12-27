@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="GeneratedResources"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/projects/avegasoft/frameworks/reporting-gwt-frameworks/target/reporting-gwt-frameworks-5.0.0.0/WEB-INF/lib/rpt_engine-5.0.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/projects/avegasoft/frameworks/reporting-gwt-frameworks/target/reporting-gwt-frameworks-5.0.0.0/WEB-INF/lib/common-classes-5.0.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/projects/avegasoft/web-applications/alliance-ws/target/alliance-ws-5.0.0.0/WEB-INF/lib/log4j-1.2.9.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

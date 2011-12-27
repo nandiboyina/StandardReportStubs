@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:f="urn:import:com.medassets.report.client.standard"
+    xmlns:c="urn:import:com.medassets.report.client.component">
+
+	<ui:style src="../resources/GlobalStyles.css" />
+
+	<g:HTMLPanel>
+		<g:ScrollPanel ui:field="scrollPanel">
+			<c:MAFormPanel ui:field="formPanel" styleName="{style.dialogForm}"/>
+		</g:ScrollPanel>
+		<g:FlowPanel styleName="{style.dialogButtonPanel}">
+            <g:Button text="Save" ui:field="saveButton"></g:Button>
+            <g:Button text="Save As" ui:field="saveAsButton"></g:Button>
+			<g:Button text="Run" ui:field="runButton"></g:Button>
+			<g:Button text="Close" ui:field="closeButton"></g:Button>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

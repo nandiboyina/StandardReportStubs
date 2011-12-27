@@ -1,0 +1,66 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:DialogBox animationEnabled="true" modal="true"
+			glassEnabled="true" width="450px" height="286px" ui:field="mainPanel">
+			<g:VerticalPanel width="424px" height="278px">
+				<g:AbsolutePanel height="279px">
+					<g:at left="0" top="0">
+						<g:HorizontalPanel ui:field="hpOne">
+							<g:Label ui:field="title" text="Select All" />
+						</g:HorizontalPanel>
+					</g:at>
+					<g:at left="0" top="24">
+							<g:AbsolutePanel width="450px" height="36px">
+								<g:at left="10" top="10">
+									<g:RadioButton name="new name" text="AND"
+										checked="true" ui:field="andRadioButton" />
+								</g:at>
+								<g:at left="95" top="10">
+									<g:RadioButton name="new name" text="OR"
+										ui:field="orRadioButton" />
+								</g:at>
+								<g:at left="277" top="10">
+									<g:RadioButton name="new name" text="AND NOT"
+										ui:field="andNotRadioButton" />
+								</g:at>
+								<g:at left="177" top="10">
+									<g:RadioButton name="new name" text="OR NOT&#13;&#10;"
+										ui:field="orNotRadioButton" />
+								</g:at>
+							</g:AbsolutePanel>
+					</g:at>
+					<g:at left="0" top="89">
+						<g:AbsolutePanel height="78px" width="414px">
+							<g:at left="0" top="34">
+								<g:TextBox width="404px" ui:field="paramDescLblBox"
+									readOnly="true" height="26px" />
+							</g:at>
+							<g:at left="-2" top="10">
+								<g:Label text="New Label" ui:field="paramDescHeader"
+									width="414px" height="18px" />
+							</g:at>
+						</g:AbsolutePanel>
+					</g:at>
+					<g:at left="0" top="186">
+						<g:AbsolutePanel height="45px" width="414px">
+							<g:at left="98" top="0">
+								<g:Button ui:field="okBtn" text="OK" width="67px" />
+							</g:at>
+							<g:at left="187" top="0">
+								<g:Button ui:field="cancelBtn" text="CANCEL" width="67px"
+									height="24px" />
+							</g:at>
+						</g:AbsolutePanel>
+					</g:at>
+				</g:AbsolutePanel>
+			</g:VerticalPanel>
+		</g:DialogBox>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+xmlns:cw='urn:import:com.medassets.report.client.flex.selection.view'
+xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+
+	<ui:style>
+		.panel {
+			background-color: ivory;
+		}
+	</ui:style>
+
+	<g:FlowPanel styleName="{style.panel}">
+		<g:DialogBox height="330px" width="590px" ui:field="dialogWindow">
+			<g:AbsolutePanel height="493px" width="578px">
+			<g:at left="10" top="10">
+				<g:AbsolutePanel width="563px" height="457px">
+					<g:at left="0" top="160">
+						<g:FlowPanel width="540px" height="206px">
+							<g:AbsolutePanel width="540px" height="259px" ui:field="dateOrNumericMatchPanel">
+								<g:at left="98" top="33">
+								<p1:DatePicker ui:field="startDatePicker" width="140px" height="90px"/>
+							</g:at>
+							<g:at left="10" top="20">
+								<g:Label text="the value(s):"/>
+							</g:at>
+							<g:at left="88" top="10">
+								<g:TextBox ui:field="startDateBox"/>
+							</g:at>
+							<g:at left="88" top="10">
+								<g:TextBox ui:field="rangeStartNbrBox"/>
+							</g:at>
+							<g:at left="249" top="10">
+								<g:AbsolutePanel height="215px" width="281px" ui:field="andRangePanel">
+									<g:at left="68" top="23">
+										<p1:DatePicker ui:field="endDatePicker"/>
+									</g:at>
+									<g:at left="29" top="4">
+									<g:Label text="and" width="23px" height="24px"/>
+								</g:at>
+									<g:at left="58" top="0">
+										<g:TextBox ui:field="endDateBox"/>
+									</g:at>
+									<g:at left="58" top="0">
+										<g:TextBox ui:field="rangeEndNbrBox"/>
+									</g:at>
+							</g:AbsolutePanel>
+							</g:at>
+						</g:AbsolutePanel>
+							<g:AbsolutePanel width="540px" height="48px" ui:field="characterMatchPanel">
+							<g:at left="10" top="16">
+								<g:Label text="the character(s)" width="200px" height="18px"/>
+							</g:at>
+							<g:at left="230" top="10">
+								<g:TextBox width="292px" height="16px" ui:field="matchTxtBox"/>
+							</g:at>
+						</g:AbsolutePanel>
+						</g:FlowPanel>
+					</g:at>
+					<g:at left="10" top="10">
+						<g:Label text="Select by" width="520px" height="18px" ui:field="matchDialogTitle"/>
+					</g:at>
+					<g:at left="10" top="81">
+						<g:Label text="New Label" width="520px" height="18px" ui:field="fieldNameLbl"/>
+					</g:at>
+					<g:at left="10" top="225">
+						<g:CheckBox text="Ignore capitalization" width="140px" height="20px" ui:field="ignoreCapsChkBox"/>
+					</g:at>
+					<g:at left="10" top="28">
+						<g:AbsolutePanel height="36px" width="450px">
+							<g:at left="10" top="10">
+								<g:RadioButton name="new name" checked="true" text="AND" ui:field="andRadioBtn"/>
+							</g:at>
+							<g:at left="95" top="10">
+								<g:RadioButton name="new name" text="OR" ui:field="orRadioBtn"/>
+							</g:at>
+							<g:at left="277" top="10">
+								<g:RadioButton name="new name" text="AND NOT" ui:field="andNotRadioBtn"/>
+							</g:at>
+							<g:at left="177" top="10">
+								<g:RadioButton name="new name" text="OR NOT" ui:field="orNotRadioBtn"/>
+							</g:at>
+						</g:AbsolutePanel>
+					</g:at>
+					<g:at left="10" top="94">
+						<g:HorizontalPanel width="529px" height="47px">
+								<g:AbsolutePanel width="185px" height="36px" ui:field="codeNamePanel">
+							<g:at left="10" top="10">
+								<g:RadioButton name="new name" text="Code" ui:field="codeRadioBtn"/>
+							</g:at>
+							<g:at left="97" top="10">
+								<g:RadioButton name="new name" text="Name" ui:field="nameRadioBtn"/>
+							</g:at>
+						</g:AbsolutePanel>
+								<g:AbsolutePanel width="316px" height="37px">
+									<g:at left="38" top="10">
+										<g:Label text="that/is" width="51px" height="18px" ui:field="fieldReferenceLbl"/>
+									</g:at>
+									<g:at left="117" top="6">
+										<g:ListBox width="140px" height="22px" ui:field="matchOptionCmbBox"/>
+									</g:at>
+								</g:AbsolutePanel>
+							</g:HorizontalPanel>
+					</g:at>
+					<g:at left="126" top="372">
+						<g:Button text="OK" width="85px" height="24px" ui:field="okButton"/>
+					</g:at>
+					<g:at left="238" top="372">
+						<g:Button text="CANCEL" width="85px" height="24px" ui:field="cancelBtn"/>
+					</g:at>
+				</g:AbsolutePanel>
+			</g:at>
+		</g:AbsolutePanel>
+		</g:DialogBox>
+	</g:FlowPanel>
+</ui:UiBinder>

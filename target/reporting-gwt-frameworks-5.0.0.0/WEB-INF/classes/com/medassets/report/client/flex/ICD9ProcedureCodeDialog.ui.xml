@@ -1,0 +1,73 @@
+<ui:UiBinder
+        xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:avega="urn:import:avega.gwt.client"
+        >
+
+
+    <ui:style>
+        .panel {
+            padding: 10px;
+        }
+
+        .aboutText {
+            text-align: left;
+        }
+
+        .buttons {
+            text-align: right;
+        }
+    </ui:style>
+
+    <g:HTMLPanel width='24em' styleName='{style.panel}'>
+
+        <div>
+            ICD9CM Prncpl Procedure Code
+        </div>
+
+        <g:CaptionPanel captionText="Ranking">
+            <avega:VerticalFlowPanel>
+                <g:Label>Rank by:</g:Label>
+                <g:ListBox/>
+                <avega:HorizontalFlowPanel>
+                    <g:Label>Order:</g:Label>
+                    <g:RadioButton name="ascending">ascending</g:RadioButton>
+                    <g:RadioButton name="descending">descending</g:RadioButton>
+                </avega:HorizontalFlowPanel>
+            </avega:VerticalFlowPanel>
+        </g:CaptionPanel>
+
+        <g:CaptionPanel captionText="Limits">
+            <avega:VerticalFlowPanel>
+
+            <avega:HorizontalFlowPanel>
+                <avega:VerticalFlowPanel>
+                    <g:Label>Limit to:</g:Label>
+                    <g:ListBox/>
+                </avega:VerticalFlowPanel>
+                <avega:VerticalFlowPanel>
+                    <avega:HorizontalFlowPanel>
+                        <g:Label>Value</g:Label>
+                        <g:CheckBox>percent</g:CheckBox>
+                    </avega:HorizontalFlowPanel>
+                    <g:TextBox/>
+                </avega:VerticalFlowPanel>
+            </avega:HorizontalFlowPanel>
+            <g:ListBox/>
+            </avega:VerticalFlowPanel>
+
+        </g:CaptionPanel>
+
+        <g:CaptionPanel captionText="Show">
+            <avega:HorizontalFlowPanel>
+                <g:RadioButton name="show">Code and Name</g:RadioButton>
+                <g:RadioButton name="show">Code only</g:RadioButton>
+                <g:RadioButton name="show">Name only</g:RadioButton>
+            </avega:HorizontalFlowPanel>
+        </g:CaptionPanel>
+
+        <div class='{style.buttons}'>
+            <g:Button text='Close' ui:field="closeButton"/>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

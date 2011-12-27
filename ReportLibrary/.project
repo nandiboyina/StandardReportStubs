@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ReportLibrary</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>GeneratedResources</name>
+			<type>2</type>
+			<location>C:/projects/avegasoft/frameworks/reporting-gwt-frameworks/target/generated-sources/gwt</location>
+		</link>
+		<link>
+			<name>java</name>
+			<type>2</type>
+			<location>C:/projects/avegasoft/frameworks/reporting-gwt-frameworks/src/main/java</location>
+		</link>
+		<link>
+			<name>resources</name>
+			<type>2</type>
+			<location>C:/projects/avegasoft/frameworks/reporting-gwt-frameworks/src/main/resources</location>
+		</link>
+	</linkedResources>
+</projectDescription>

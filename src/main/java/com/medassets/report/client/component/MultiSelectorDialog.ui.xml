@@ -1,0 +1,132 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:cellview="urn:import:com.google.gwt.user.cellview.client"
+             xmlns:other="urn:import:com.medassets.report.client.other"
+             xmlns:chooser="urn:import:com.medassets.report.client.component">
+
+
+    <ui:style>
+        .listPanels {
+            border: 1px solid;
+        }
+
+        .select-all {
+            margin-right: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .centerBar {
+            padding-left: -30px;
+            margin: 0 auto;
+            /*width: 20px;*/
+            text-align: center;
+        }
+
+        .selector-button {
+            padding: 10px;
+            margin-top: 4px;
+            width: 40px;
+        }
+
+        .ok-button {
+            margin: 4px;
+            width: 70px;
+            text-align: center;
+        }
+
+        .bottomPanel {
+            margin-top: 4px;
+            padding: 4px;
+        }
+
+        .searchBox {
+            margin-left: 4px;
+        }
+
+        .button-panel {
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .html_panel {
+            margin-left: 5px;
+        }
+    </ui:style>
+
+    <chooser:MultiSelectorDialog>
+
+        <g:HTMLPanel styleName="{style.html_panel}">
+
+
+            <g:LayoutPanel width="670px" height="20px">
+                <g:layer left="1" width="300px">
+                    <other:HorizontalFlowPanel>
+                        <g:Label>Available (</g:Label>
+                        <g:Label ui:field="availableCount"/>
+                        <!-- IDE's may flag the next line as an error. It's not -->
+                        <g:Label>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</g:Label>
+                        <g:CheckBox ui:field="selectAllCheckBox" styleName="{style.select-all}">Select All</g:CheckBox>
+                    </other:HorizontalFlowPanel>
+                </g:layer>
+                <g:layer right="1" width="300px">
+                    <other:HorizontalFlowPanel ui:field="selectedCountPanel">
+                        <g:Label>Selected (</g:Label>
+                        <g:Label ui:field="selectedCount"/>
+                        <g:Label>)</g:Label>
+                    </other:HorizontalFlowPanel>
+                </g:layer>
+            </g:LayoutPanel>
+
+            <g:LayoutPanel width="670px" height="450px" ui:field="mainPanel">
+
+                <g:layer width="300px" left="1">
+                    <g:ScrollPanel ui:field="availableScrollPanel" styleName="{style.listPanels}">
+                        <cellview:CellTable ui:field="availableTable"/>
+                    </g:ScrollPanel>
+                </g:layer>
+
+                <g:layer width="300px" right="1">
+                    <g:ScrollPanel ui:field="selectScrollPanel" styleName="{style.listPanels}">
+                        <cellview:CellTable ui:field="selectedTable"/>
+                    </g:ScrollPanel>
+                </g:layer>
+
+                <!-- make sure the buttons are last so they are on top of the available panel for when we're in multi select mode
+                -->
+                <g:layer width="40px" left="315px">
+                    <g:HTMLPanel ui:field="buttonPanel" styleName="{style.centerBar}">
+                        <g:Button ui:field="addAllButton" styleName="{style.selector-button}">&gt;&gt;</g:Button>
+                        <g:Button ui:field="addButton" styleName="{style.selector-button}">&gt;</g:Button>
+                        <g:Button ui:field="removeButton" styleName="{style.selector-button}">&lt;</g:Button>
+                        <g:Button ui:field="removeAllButton" styleName="{style.selector-button}">&lt;&lt;</g:Button>
+                    </g:HTMLPanel>
+                </g:layer>
+
+            </g:LayoutPanel>
+
+
+            <g:LayoutPanel width="100%" height="34px">
+                <g:layer width="50%" left="1px">
+                    <g:HorizontalPanel styleName="{style.bottomPanel}">
+                        <g:ListBox ui:field="criteria">
+                            <g:item>Starts with</g:item>
+                            <g:item value="2">Contains</g:item>
+                        </g:ListBox>
+                        <g:TextBox ui:field="search" styleName="{style.searchBox}"/>
+                    </g:HorizontalPanel>
+
+                </g:layer>
+                <g:layer width="200px" right="1px">
+                    <g:HTMLPanel styleName="{style.button-panel}">
+                        <g:Button text="OK" ui:field="okButton" styleName="{style.ok-button}"/>
+                        <g:Button text="Cancel" ui:field="cancelButton" styleName="{style.ok-button}"/>
+                    </g:HTMLPanel>
+                </g:layer>
+            </g:LayoutPanel>
+
+        </g:HTMLPanel>
+    </chooser:MultiSelectorDialog>
+
+</ui:UiBinder>
