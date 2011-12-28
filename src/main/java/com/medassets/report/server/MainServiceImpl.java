@@ -233,7 +233,7 @@ public class MainServiceImpl extends RemoteServiceServlet implements MainService
 		
 			dto.setTemplateName("Template Name");
 			dto.setReportTemplateId((long)i);
-			dto.setReportInstanceId((long)i);
+			//dto.setReportInstanceId((long)i);
 			dto.setCreatedCode("Bubba");
 			dto.setCreatedDate(new Date());
 			dto.setModifiedCode("Smith");

@@ -57,8 +57,13 @@ public class StandardServiceImpl extends RemoteServiceServlet implements Standar
     	
         ArrayList<StandardParamItemDTO> list = new ArrayList<StandardParamItemDTO>();
         if (USE_MOCK_DATA) {
-        	    
-                return stub.getParams(reportId);
+        	    if(StubStandardServiceImpl.c==1){
+        	    	StubStandardServiceImpl.c=0;
+        	    	 return stub.getUpdatedParams(reportId);
+               
+        	    }
+        	    else{
+        	    return stub.getParams(reportId);}
             }
          else {
             try {
@@ -188,9 +193,15 @@ public class StandardServiceImpl extends RemoteServiceServlet implements Standar
         List<ParamAvailableValue> result = new ArrayList<ParamAvailableValue>();
         boolean codeOnly = false;
         boolean allNull = true;
+        if(USE_MOCK_DATA){
+        	result=new StubStandardServiceImpl().getAvailableValuesForCBOorLIST(sDto);
+        	}
+        else{
+        	result = paramDAO.getAvailableValuesForCBOorLIST(sDto);
+        }
         try {
 
-            result = paramDAO.getAvailableValuesForCBOorLIST(sDto);
+            
             if (("*").equals(dto.getDefaultParamCodeValueInCrystalReport())) {
                 ParamAvailableItemValue defaultValue = new ParamAvailableItemValue();
                 defaultValue.setCode("*");
